@@ -9,4 +9,5 @@ add_executable( ${PROJECT_NAME}
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 
-target_link_libraries(${PROJECT_NAME} tensorflow)
+find_package(OpenCV REQUIRED)
+target_link_libraries(${PROJECT_NAME} tensorflow ${OpenCV_LIBS})
